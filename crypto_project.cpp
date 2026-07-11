@@ -1,6 +1,27 @@
 #include <iostream>
 #include <map>
 
+// creating an enum class
+enum OrderBookType{bid, ask};
+
+class OrderBookEntrey{
+    public:
+    // Adding a paramtrized Constructor , and utilizing (this) keyword // then trying to use initlizaer list instead
+      OrderBookEntrey (
+        double price,
+        double amount,
+        std::string timestamp,
+        std::string product,
+        OrderBookType ordertype)
+        : price(price), amount(amount), timestamp(timestamp), product(product), ordertype(ordertype){}
+        
+
+        double price;
+        double amount;
+        std::string timestamp;
+        std::string product;
+        OrderBookType ordertype;
+};
 void printMenu(){
     std::cout << "Please select an option thorugh 1-6: " << std::endl;
     std::cout << "1 - Print Help " << std::endl;
