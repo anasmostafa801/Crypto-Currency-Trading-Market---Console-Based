@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 
 void printMenu(){
     std::cout << "Please select an option thorugh 1-6: " << std::endl;
